@@ -77,7 +77,7 @@ class VKTest(BaseHandler, VKMixin):
         self.vk_request(self.async_callback(self._on_test), access_token=access_token, api_method="friends.get", params={"fields": "photo"})
 
     def _on_test(self, response):
-        #self.finish("bye")
+        # "response" is json-response from server
         self.redirect("/")
 
 class MainHandler(BaseHandler):

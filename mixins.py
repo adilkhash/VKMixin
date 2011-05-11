@@ -31,7 +31,7 @@ class VKMixin(OAuth2Mixin):
     def vk_request(self, callback, api_method, params, access_token=None):
         if access_token is None:
             logging.warning("Access token required")
-            callback()
+            callback(None)
             return
 
         args = {"access_token": access_token}
